@@ -1,1 +1,5 @@
-A simple wikimedia skin.\nRequirements:\nWikimedia Version 24.0 >
+##A Simple MediaWiki Skin for www.npea.org.au
+
+#Requirements:
+
+MediaWiki Version >= 24.0
