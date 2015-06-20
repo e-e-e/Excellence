@@ -100,17 +100,29 @@ class ExcellenceTemplate extends BaseTemplate {
 		
 		<div id="mw-wrapper">
 			<div id="header">
-				<a
-					id="p-logo"
-					role="banner"
-					href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
-					<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
-				>
-					<img
-						src="<?php $this->text( 'logopath' ) ?>"
-						alt="<?php $this->text( 'sitename' ) ?>"
-					/>
-				</a>
+				<!-- MAIN TITLE HEADER -->
+				<div id="header-title">
+					<a
+						id="p-logo"
+						role="banner"
+						href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
+						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
+					>
+						<img
+							src="<?php $this->text( 'logopath' ) ?>"
+							alt="<?php $this->text( 'sitename' ) ?>"
+						/>
+					</a>
+					<?php 
+						$this->outputPortlet( array(
+							'id' => 'p-personal',
+							'headerMessage' => 'personaltools',
+							'content' => $this->getPersonalTools(),
+						) );
+					?>
+					<h1>National Programme For Excellence in the Arts</h1>
+				</div>
+				<!-- SEARCH BOX -->
 				<div id='searchbox'>
 					<form
 						action="<?php $this->text( 'wgScript' ) ?>"
@@ -127,17 +139,11 @@ class ExcellenceTemplate extends BaseTemplate {
 
 					</form>
 				</div>
-				<!-- NAV MENU -->
+				<!-- HEARDER MAIN NAV MENU -->
 				<div id="mw-navigation">
 					<h2><?php $this->msg( 'navigation-heading' ) ?></h2>
 
 					<?php
-
-					$this->outputPortlet( array(
-						'id' => 'p-personal',
-						'headerMessage' => 'personaltools',
-						'content' => $this->getPersonalTools(),
-					) );
 
 					foreach ( $this->getSidebar() as $boxName => $box ) {
 						$this->outputPortlet( $box );
