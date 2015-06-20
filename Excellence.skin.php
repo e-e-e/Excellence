@@ -101,7 +101,7 @@ class ExcellenceTemplate extends BaseTemplate {
 		<div id="mw-wrapper">
 			<div id="header">
 				<!-- MAIN TITLE HEADER -->
-				<div id="header-title">
+				
 					<div id="p-logo"><a
 						role="banner"
 						href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
@@ -112,6 +112,7 @@ class ExcellenceTemplate extends BaseTemplate {
 							alt="<?php $this->text( 'sitename' ) ?>"
 						/>
 					</a></div>
+					<div id="header-title">
 					<div id='searchbox'>
 						<form
 							action="<?php $this->text( 'wgScript' ) ?>"
