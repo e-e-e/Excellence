@@ -100,8 +100,32 @@ class ExcellenceTemplate extends BaseTemplate {
 		
 		<div id="mw-wrapper">
 			<div id="header">
+			<!-- LOGIN AND SEARCH OPTIONS -->
+				<?php 
+					$this->outputPortlet( array(
+						'id' => 'p-personal',
+						'headerMessage' => 'personaltools',
+						'content' => $this->getPersonalTools(),
+					) );
+				?>
+				<div id='searchbox'>
+					<form
+						action="<?php $this->text( 'wgScript' ) ?>"
+						role="search"
+						class="mw-portlet"
+						id="p-search"
+					>
+						<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+
+						<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>
+
+						<?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
+						<?php echo $this->makeSearchButton( 'go' ) ?>
+
+					</form>
+				</div>
 				<!-- MAIN TITLE HEADER -->
-				
+				<div id="header-title">
 					<div id="p-logo"><a
 						role="banner"
 						href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
@@ -112,31 +136,7 @@ class ExcellenceTemplate extends BaseTemplate {
 							alt="<?php $this->text( 'sitename' ) ?>"
 						/>
 					</a></div>
-					<div id="header-title">
-					<div id='searchbox'>
-						<form
-							action="<?php $this->text( 'wgScript' ) ?>"
-							role="search"
-							class="mw-portlet"
-							id="p-search"
-						>
-							<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
-
-							<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>
-
-							<?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
-							<?php echo $this->makeSearchButton( 'go' ) ?>
-
-						</form>
-					</div>
-					<?php 
-						$this->outputPortlet( array(
-							'id' => 'p-personal',
-							'headerMessage' => 'personaltools',
-							'content' => $this->getPersonalTools(),
-						) );
-					?>
-					<h1>National Programme For Excellence in the Arts</h1>
+					<div id='title'><h1>National Programme For Excellence in the Arts</h1></div>
 				</div>
 				<!-- HEARDER MAIN NAV MENU -->
 				<div id="mw-navigation">

@@ -101,14 +101,18 @@ div.user-actions {
 	width: 160px;
 	float: left;
 	clear: left;
-
 	 a {
 		text-align: center;
 	}
-
 }
 
-#header-title {
+#header-title{
+	display: block;
+	clear: both;
+}
+
+#title {
+	display: inline-block;
 	h1 {
 		border: none;
 		font-family: 'source_sans_black';
@@ -121,20 +125,21 @@ div.user-actions {
 /* search box */
 
 #p-search {
-	display: inline-block;
+	display: block;
 	float: right;
 	text-align: right;
+	clear: both;
 }
 
 #p-personal {
-	display: inline-block;
+	display: block;
+	clear: both;
 	float: right;
-	text-align: right;	
+	text-align: right;
+
 	ul {
-	
 		list-style-type: none;
 		margin: 0;
-
 		li {
 			display: inline-block;
 			margin-right: 1em;
