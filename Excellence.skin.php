@@ -97,18 +97,56 @@ class ExcellenceTemplate extends BaseTemplate {
 		global $wgUser;
 
 		$this->html( 'headelement' ) ?>
+		
 		<div id="mw-wrapper">
-			<a
-				id="p-logo"
-				role="banner"
-				href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
-				<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
-			>
-				<img
-					src="<?php $this->text( 'logopath' ) ?>"
-					alt="<?php $this->text( 'sitename' ) ?>"
-				/>
-			</a>
+			<div id="header">
+				<a
+					id="p-logo"
+					role="banner"
+					href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
+					<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
+				>
+					<img
+						src="<?php $this->text( 'logopath' ) ?>"
+						alt="<?php $this->text( 'sitename' ) ?>"
+					/>
+				</a>
+				<div id='searchbox'>
+					<form
+						action="<?php $this->text( 'wgScript' ) ?>"
+						role="search"
+						class="mw-portlet"
+						id="p-search"
+					>
+						<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+
+						<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>
+
+						<?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
+						<?php echo $this->makeSearchButton( 'go' ) ?>
+
+					</form>
+				</div>
+				<!-- NAV MENU -->
+				<div id="mw-navigation">
+					<h2><?php $this->msg( 'navigation-heading' ) ?></h2>
+
+					<?php
+
+					$this->outputPortlet( array(
+						'id' => 'p-personal',
+						'headerMessage' => 'personaltools',
+						'content' => $this->getPersonalTools(),
+					) );
+
+					foreach ( $this->getSidebar() as $boxName => $box ) {
+						$this->outputPortlet( $box );
+					}
+
+					?>
+				</div>
+
+			</div>
 
 
 			<div class="mw-body" role="main">
@@ -133,7 +171,7 @@ class ExcellenceTemplate extends BaseTemplate {
 						'headerMessage' => 'namespaces',
 						'content' => $this->data['content_navigation']['namespaces'],
 					) );
-					
+
 					if ( !$wgUser->isAnon() ) {
 						
 						$this->outputPortlet( array(
@@ -178,40 +216,6 @@ class ExcellenceTemplate extends BaseTemplate {
 					<?php $this->html( 'dataAfterContent' ); ?>
 
 				</div>
-			</div>
-
-
-			<div id="mw-navigation">
-				<h2><?php $this->msg( 'navigation-heading' ) ?></h2>
-
-				<form
-					action="<?php $this->text( 'wgScript' ) ?>"
-					role="search"
-					class="mw-portlet"
-					id="p-search"
-				>
-					<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
-
-					<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>
-
-					<?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
-					<?php echo $this->makeSearchButton( 'go' ) ?>
-
-				</form>
-
-				<?php
-
-				$this->outputPortlet( array(
-					'id' => 'p-personal',
-					'headerMessage' => 'personaltools',
-					'content' => $this->getPersonalTools(),
-				) );
-
-				foreach ( $this->getSidebar() as $boxName => $box ) {
-					$this->outputPortlet( $box );
-				}
-
-				?>
 			</div>
 
 			<div id="mw-footer">
