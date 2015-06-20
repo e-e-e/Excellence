@@ -29,7 +29,7 @@ div#toc {
 	background-color: #87e0fd;
 }
 
-h1, h2 {
+h1, h2, .user-actions {
 	border-bottom: #000 solid thick;
 }
 
@@ -37,11 +37,21 @@ div.user-actions {
 
 	.mw-portlet {
 		display: inline-block;
+		h3 {
+			display: none;
+		}
 		ul {
 			list-style-type: none;
 			margin: 0;
 			li {
 				display: inline;
+				margin: 0 10px;
+			}
+			&:before {
+				content: "[ ";
+			}
+			&:after {
+				content: " ]";
 			}
 		}
 	}
