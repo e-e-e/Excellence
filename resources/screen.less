@@ -80,12 +80,6 @@ div.user-actions {
 	padding: 0;
 }
 
-#p-logo,
-#mw-navigation {
-	width: auto;
-	padding:10px 10px;
-}
-
 #mw-navigation {
 	width: auto;
 	div{
@@ -100,19 +94,42 @@ div.user-actions {
 	}
 }
 
+
+/* HEADER */
+
 #p-logo {
-	text-align: center;
+	width: 160px;
+	float: left;
+	clear: left;
+
+	 a {
+		text-align: center;
+	}
+
 }
 
-/* Search form and personal menu in top-right corner */
+#header-title {
+	h1 {
+		border: none;
+		font-family: 'source_sans_black';
+		font-style: italic;
+		font-size: 3em;
+		display: inline-block;
+		
+	}
+}
+
+/* search box */
 
 #p-search {
-	width: 46em;
+	display: inline-block;
+	float: right;
 	text-align: right;
 }
 
 #p-personal {
-	width: 46em;
+	display: inline-block;
+	float: right;
 	text-align: right;	
 	ul {
 	

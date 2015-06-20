@@ -102,8 +102,7 @@ class ExcellenceTemplate extends BaseTemplate {
 			<div id="header">
 				<!-- MAIN TITLE HEADER -->
 				<div id="header-title">
-					<a
-						id="p-logo"
+					<div id="p-logo"><a
 						role="banner"
 						href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
@@ -113,6 +112,22 @@ class ExcellenceTemplate extends BaseTemplate {
 							alt="<?php $this->text( 'sitename' ) ?>"
 						/>
 					</a>
+					<div id='searchbox'>
+						<form
+							action="<?php $this->text( 'wgScript' ) ?>"
+							role="search"
+							class="mw-portlet"
+							id="p-search"
+						>
+							<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+
+							<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>
+
+							<?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
+							<?php echo $this->makeSearchButton( 'go' ) ?>
+
+						</form>
+					</div>
 					<?php 
 						$this->outputPortlet( array(
 							'id' => 'p-personal',
@@ -121,23 +136,6 @@ class ExcellenceTemplate extends BaseTemplate {
 						) );
 					?>
 					<h1>National Programme For Excellence in the Arts</h1>
-				</div>
-				<!-- SEARCH BOX -->
-				<div id='searchbox'>
-					<form
-						action="<?php $this->text( 'wgScript' ) ?>"
-						role="search"
-						class="mw-portlet"
-						id="p-search"
-					>
-						<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
-
-						<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>
-
-						<?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
-						<?php echo $this->makeSearchButton( 'go' ) ?>
-
-					</form>
 				</div>
 				<!-- HEARDER MAIN NAV MENU -->
 				<div id="mw-navigation">
