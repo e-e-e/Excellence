@@ -124,20 +124,40 @@ class ExcellenceTemplate extends BaseTemplate {
 					<span dir="auto"><?php $this->html( 'title' ) ?></span>
 				</h1>
 				
-				<?php if ( !$wgUser->isAnon() ) { ?>
-				<div> 
+				<div class='user-actions'> 
 					<!-- include page actions etc if user is logged in -->
 					<?php
 
 					$this->outputPortlet( array(
-					'id' => 'p-views',
-					'headerMessage' => 'views',
-					'content' => $this->data['content_navigation']['views'],
+						'id' => 'p-namespaces',
+						'headerMessage' => 'namespaces',
+						'content' => $this->data['content_navigation']['namespaces'],
 					) );
 					
+					if ( !$wgUser->isAnon() ) {
+						
+						$this->outputPortlet( array(
+							'id' => 'p-views',
+							'headerMessage' => 'views',
+							'content' => $this->data['content_navigation']['views'],
+						) );
+
+						$this->outputPortlet( array(
+							'id' => 'p-variants',
+							'headerMessage' => 'variants',
+							'content' => $this->data['content_navigation']['variants'],
+						) );
+						
+						$this->outputPortlet( array(
+							'id' => 'p-actions',
+							'headerMessage' => 'actions',
+							'content' => $this->data['content_navigation']['actions'],
+						) );
+
+					}
+
 					?>
 				</div>
-				<?php } ?>
 
 				<div id="siteSub"><?php $this->msg( 'tagline' ) ?></div>
 
@@ -185,23 +205,6 @@ class ExcellenceTemplate extends BaseTemplate {
 					'id' => 'p-personal',
 					'headerMessage' => 'personaltools',
 					'content' => $this->getPersonalTools(),
-				) );
-
-				$this->outputPortlet( array(
-					'id' => 'p-namespaces',
-					'headerMessage' => 'namespaces',
-					'content' => $this->data['content_navigation']['namespaces'],
-				) );
-				$this->outputPortlet( array(
-					'id' => 'p-variants',
-					'headerMessage' => 'variants',
-					'content' => $this->data['content_navigation']['variants'],
-				) );
-				
-				$this->outputPortlet( array(
-					'id' => 'p-actions',
-					'headerMessage' => 'actions',
-					'content' => $this->data['content_navigation']['actions'],
 				) );
 
 				foreach ( $this->getSidebar() as $boxName => $box ) {
