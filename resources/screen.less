@@ -154,13 +154,21 @@ div.user-actions {
 }
 
 #p-navigation {
+	h3 {
+		display: none;
+	}
 	ul {
 		list-style-type: none;
 		margin: 0;
 		li {
 			display: inline-block;
 			margin-right: 1em;
+			border-bottom: thick transparent;
+			&:hover {
+				border-bottom: #000 thick solid;
+			}
 		}
+
 	}
 }
 
@@ -176,16 +184,9 @@ div.user-actions {
 #mw-footer ul {
 	list-style-type: none;
 	margin: 0;
-	h3 {
-		display: none;
-	}
 	li {
 		display: inline-block;
 		margin-right: 1em;
-		border-bottom: transparent;
-		&:hover {
-			border-bottom: #000 thick solid;
-		}
 	}
 }
 /* Hide some headings, but keep them accessible for screen-readers */
