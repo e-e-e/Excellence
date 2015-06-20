@@ -16,6 +16,23 @@ class SkinExcellence extends SkinTemplate {
 		$template = 'ExcellenceTemplate', $useHeadElement = true;
 
 	/**
+     * Initializes output page and sets up skin-specific parameters
+     * @param $out OutputPage object to initialize
+     */
+	public function initPage( OutputPage $out ) {
+		parent::initPage( $out );
+		$out->addHeadItem('npea-metadata', <<<META
+	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
+	<meta property="og:type"   content="website" />
+  <meta property="og:url"    content="www.npea.org.au" />
+  <meta property="og:image"  content="/logo.png" />
+  <meta property="og:description" content="Up-to-date information about the Australian National Programme for Excellence in the Arts, administered by the Ministry for the Arts." />
+META;
+		);
+
+	}
+
+	/**
 	 * Add CSS via ResourceLoader
 	 *
 	 * @param $out OutputPage
