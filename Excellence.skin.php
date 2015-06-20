@@ -27,7 +27,7 @@ class SkinExcellence extends SkinTemplate {
   <meta property="og:url"    content="www.npea.org.au" />
   <meta property="og:image"  content="/logo.png" />
   <meta property="og:description" content="Up-to-date information about the Australian National Programme for Excellence in the Arts, administered by the Ministry for the Arts." />
-META;
+META
 		);
 
 	}
