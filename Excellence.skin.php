@@ -204,7 +204,7 @@ class ExcellenceTemplate extends BaseTemplate {
 					'content' => $this->data['content_navigation']['actions'],
 				) );
 
-				foreach ( $this-> () as $boxName => $box ) {
+				foreach ( $this->getSidebar() as $boxName => $box ) {
 					$this->outputPortlet( $box );
 				}
 
