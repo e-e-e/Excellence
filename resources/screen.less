@@ -117,13 +117,14 @@ div.user-actions {
 #title {
 	display: table-cell;
 	vertical-align: middle;
+	padding-left: 1em;
 	h1 {
 		border: none;
 		font-family: 'source_sans_black';
 		font-style: italic;
 		font-size: 3em;
 		display: inline;
-		padding-left: 1em;
+
 	}
 }
 
@@ -147,10 +148,22 @@ div.user-actions {
 		margin: 0;
 		li {
 			display: inline-block;
+			margin-left: 1em;
+		}
+	}
+}
+
+#p-navigation {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		li {
+			display: inline-block;
 			margin-right: 1em;
 		}
 	}
 }
+
 /* Footer */
 
 #mw-footer {
@@ -163,10 +176,16 @@ div.user-actions {
 #mw-footer ul {
 	list-style-type: none;
 	margin: 0;
-
+	h3 {
+		display: none;
+	}
 	li {
 		display: inline-block;
 		margin-right: 1em;
+		border-bottom: transparent;
+		&:hover {
+			border-bottom: #000 thick solid;
+		}
 	}
 }
 /* Hide some headings, but keep them accessible for screen-readers */
