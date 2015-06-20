@@ -111,7 +111,7 @@ class ExcellenceTemplate extends BaseTemplate {
 							src="<?php $this->text( 'logopath' ) ?>"
 							alt="<?php $this->text( 'sitename' ) ?>"
 						/>
-					</a>
+					</a></div>
 					<div id='searchbox'>
 						<form
 							action="<?php $this->text( 'wgScript' ) ?>"
