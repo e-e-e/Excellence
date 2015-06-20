@@ -94,6 +94,8 @@ class ExcellenceTemplate extends BaseTemplate {
 	 * Outputs the entire contents of the page
 	 */
 	public function execute() {
+		global $wgUser;
+
 		$this->html( 'headelement' ) ?>
 		<div id="mw-wrapper">
 			<a
@@ -121,6 +123,21 @@ class ExcellenceTemplate extends BaseTemplate {
 				<h1 class="firstHeading">
 					<span dir="auto"><?php $this->html( 'title' ) ?></span>
 				</h1>
+				
+				<?php if ( !$wgUser->isAnon() ) { ?>
+				<div> 
+					<!-- include page actions etc if user is logged in -->
+					<?php
+
+					$this->outputPortlet( array(
+					'id' => 'p-views',
+					'headerMessage' => 'views',
+					'content' => $this->data['content_navigation']['views'],
+					) );
+					
+					?>
+				</div>
+				<?php } ?>
 
 				<div id="siteSub"><?php $this->msg( 'tagline' ) ?></div>
 
@@ -180,18 +197,14 @@ class ExcellenceTemplate extends BaseTemplate {
 					'headerMessage' => 'variants',
 					'content' => $this->data['content_navigation']['variants'],
 				) );
-				$this->outputPortlet( array(
-					'id' => 'p-views',
-					'headerMessage' => 'views',
-					'content' => $this->data['content_navigation']['views'],
-				) );
+				
 				$this->outputPortlet( array(
 					'id' => 'p-actions',
 					'headerMessage' => 'actions',
 					'content' => $this->data['content_navigation']['actions'],
 				) );
 
-				foreach ( $this->getSidebar() as $boxName => $box ) {
+				foreach ( $this-> () as $boxName => $box ) {
 					$this->outputPortlet( $box );
 				}
 
