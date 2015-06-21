@@ -42,3 +42,15 @@ $wgResourceModules['skins.excellence'] = array(
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
 	'localBasePath' => &$GLOBALS['wgStyleDirectory'],
 );
+
+$wgResourceModules['skins.foobar.js'] = array(
+	'scripts' => array(
+		'Excellence/resources/app.js',
+	),
+	'dependencies' => array(
+		// In this example, awesome.js needs the jQuery UI dialog stuff
+		'jquery',
+	),
+	'remoteBasePath' => &$GLOBALS['wgStylePath'],
+	'localBasePath' => &$GLOBALS['wgStyleDirectory'],
+);
