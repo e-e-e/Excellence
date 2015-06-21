@@ -8,5 +8,6 @@ function init () {
 }
 
 function menu_show () {
-	$(this).children('li').toggle();
+	console.log('clicked!');
+	$(this).children('ul').toggle();
 }
