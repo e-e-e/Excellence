@@ -78,6 +78,12 @@ div.user-actions {
 	width: auto;
 	border: none;
 	padding: 0;
+
+	h1.firstHeading {
+		font-family: 'source_sans_black';
+		font-style: italic;
+	}
+
 }
 
 #mw-navigation {
@@ -158,10 +164,11 @@ div.user-actions {
 
 #mw-navigation {
 	
-	h2, a {
+	h3, a {
 		font-family: 'source_sans';
 		font-size: 2em;
-		line-height: 2em;
+		line-height: 1.5;
+		font-weight: bold;
 		text-decoration: none;
 		color:#000;
 		&:hover {
@@ -178,28 +185,28 @@ div.user-actions {
 	}
 
 	#p-navigation {
-		
-		display: inline-block;
+		width: auto;
+		display: block;
+		text-align: center;
+		border-bottom: #000 thick solid;
 
 		h3 {
 			display: none;
 		}
+		
 		ul {
 			list-style-type: none;
 			margin: 0;
 			li {
 				display: inline-block;
-				margin-right: 1em;
+				margin: 0 0.5em;
 				border-bottom: solid thick transparent;
 				&:hover {
 					border-bottom: #000 thick solid;
 				}
 			}
-
 		}
 	}
-
-
 
 }
 
