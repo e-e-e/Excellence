@@ -43,7 +43,7 @@ $wgResourceModules['skins.excellence'] = array(
 	'localBasePath' => &$GLOBALS['wgStyleDirectory'],
 );
 
-$wgResourceModules['skins.foobar.js'] = array(
+$wgResourceModules['skins.excellence.js'] = array(
 	'scripts' => array(
 		'Excellence/resources/app.js',
 	),
