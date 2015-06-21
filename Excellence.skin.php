@@ -21,6 +21,9 @@ class SkinExcellence extends SkinTemplate {
      */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
+		
+		$out->addModuleScripts(array('skins.excellence.js'));
+
 		$out->addHeadItem('npea-metadata', <<<META
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
 	<meta property="og:type"   content="website" />
