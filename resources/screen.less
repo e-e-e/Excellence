@@ -183,10 +183,13 @@ div.user-actions {
 	}
 
 	.mw-portlet {
-		display: inline;
+		display: inline-block;
 		font-size: 1em;
+		padding: 0 1em;
 		h3 {
 			display: inline;
+			clear: right;
+			float: left;
 			&:after {
 				content: ':'
 			}
@@ -198,10 +201,6 @@ div.user-actions {
 			li {
 				display: inline-block;
 				margin: 0 0.5em;
-				border-bottom: solid thick transparent;
-				&:hover {
-					border-bottom: #000 thick solid;
-				}
 			}
 		}
 	}
@@ -218,16 +217,10 @@ div.user-actions {
 			display: none;
 		}
 		
-		ul {
-			list-style-type: none;
-			margin: 0;
-			li {
-				display: inline-block;
-				margin: 0 0.5em;
-				border-bottom: solid thick transparent;
-				&:hover {
-					border-bottom: #000 thick solid;
-				}
+		ul li {
+			border-bottom: solid thick transparent;
+			&:hover {
+				border-bottom: #000 thick solid;
 			}
 		}
 	}
