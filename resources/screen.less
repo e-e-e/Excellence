@@ -142,6 +142,34 @@ div.user-actions {
 	float: right;
 	text-align: left;
 	clear: both;
+	
+	form {
+		border: #000 thin;
+		background-color: #fff;
+	}
+	
+	input[type=search] {
+		border: none;
+	}
+
+	input[type=submit] {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 1.65em;
+		height: 100%;
+		cursor: pointer;
+		text-indent: -99999px;
+		line-height: 1;
+		direction: ltr;
+		white-space: nowrap;
+		overflow: hidden;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEzIj48ZyBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iIzZjNmM2YyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTExLjI5IDExLjcxbC00LTQiLz48Y2lyY2xlIGN4PSI1IiBjeT0iNSIgcj0iNCIvPjwvZz48L3N2Zz4=");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
 }
 
 #p-personal {
@@ -189,7 +217,6 @@ div.user-actions {
 
 		h3 {
 			display: inline;
-			clear: right;
 			float: left;
 			&:after {
 				content: ':'
@@ -197,6 +224,7 @@ div.user-actions {
 		}
 		ul {
 			display: block;
+			text-align: center;
 			list-style-type: none;
 			margin: 0;
 			li {
