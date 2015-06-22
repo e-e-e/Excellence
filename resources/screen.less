@@ -162,19 +162,15 @@ div.user-actions {
 
 #mw-navigation {
 	width: auto;
-
 	#searchbox {
 		text-align: right;
 	}
-	div {
+	div, form {
 		display: inline-block;
 	}
-	form {
-		display: inline-block;
-	}
-	h3, a {
+
+	a {
 		font-family: 'source_sans';
-		font-size: 2em;
 		line-height: 1.5;
 		font-weight: bold;
 		text-decoration: none;
@@ -188,8 +184,12 @@ div.user-actions {
 
 	.mw-portlet {
 		display: inline;
+		font-size: 1em;
 		h3 {
 			display: inline;
+			&:after {
+				content: ':'
+			}
 		}
 		ul {
 			display: inline;
@@ -209,6 +209,7 @@ div.user-actions {
 	#p-navigation {
 		width: auto;
 		display: block;
+		font-size: 2em;
 		text-align: center;
 		border-bottom: #000 thick solid;
 		padding: 30px 0;
