@@ -14,6 +14,5 @@ function init () {
 }
 
 function menu_show () {
-	$(this).children().html('-');
 	$('#sub_menu').slideToggle();
 }
