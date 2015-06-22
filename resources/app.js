@@ -14,5 +14,6 @@ function init () {
 }
 
 function menu_show () {
+	console.log('click');
 	$('#sub_menu').slideToggle();
 }
