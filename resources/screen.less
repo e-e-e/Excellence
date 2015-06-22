@@ -68,7 +68,8 @@ h1, h2, .user-actions {
 	border-bottom: #000 solid thick;
 }
 
-a {
+a, a.external, a.new {
+
 	color: #015169;
 
 	&:visited {
@@ -313,6 +314,8 @@ div.user-actions {
 		padding: @default_margin;
 
 		h3 {
+			font-size: @n;
+			font-weight: normal;
 			display: inline;
 			&:after {
 				content: ':'
