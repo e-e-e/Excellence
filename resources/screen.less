@@ -43,18 +43,21 @@ h1, h2, .user-actions {
 	height: 0px;
 
 	div {
+		z-index: 9999;
+		position: relative;
 		background: none;
 		border: black solid 1px;
 		border-top: none;
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
-		color:white;
+		color: #000;
 		padding: 0 0.5em;
 		font-family: 'source_sans_black';
 		font-size: 1.5em
+
 		&:hover {
 			cursor: pointer;
-			color: black;
+			color: #FFF;
 		}
 	}
 }
