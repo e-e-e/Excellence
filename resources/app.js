@@ -13,6 +13,6 @@ function init () {
 }
 
 function menu_show () {
-	$(this).child().html('-');
-	$('#sub_menu').toggle();
+	$(this).children().html('-');
+	$('#sub_menu').slideToggle();
 }
