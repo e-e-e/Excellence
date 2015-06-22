@@ -137,23 +137,25 @@ div.user-actions {
 
 /* search box */
 
+#searchbox {
+	text-align: right;
+}
+
 #p-search {
+
 	display: block;
 	float: right;
 	text-align: left;
 	clear: both;
-	
-	form {
-		border: #000 thin;
-		background-color: #fff;
-	}
+	border: #000 thin;
+	background-color: #fff;
 	
 	input[type=search] {
 		border: none;
 	}
 
 	input[type=submit] {
-		position: absolute;
+		position: relative;
 		top: 0px;
 		right: 0px;
 		width: 1.65em;
@@ -190,9 +192,7 @@ div.user-actions {
 
 #mw-navigation {
 	width: auto;
-	#searchbox {
-		text-align: right;
-	}
+	
 	div, form {
 		display: inline-block;
 	}
