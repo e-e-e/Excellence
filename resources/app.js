@@ -1,6 +1,6 @@
 
-var reveal_tab = "<div class='reveal_tab'><div>+</div></div>";
-var container = "<div id='sub_menu' class='menu'></div>";
+var reveal_tab = "<div class='reveal-tab'><div>+</div></div>";
+var container = "<div id='sub_menu' class='reveal-button'></div>";
 $(document).ready(function () {
 	console.log('READY');
 	init();

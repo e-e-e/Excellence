@@ -37,13 +37,17 @@ h1, h2, .user-actions {
 }
 
 
-.reveal_tab {
+.reveal-tab {
 	
 	float: right;
 	height: 0px;
 
-	div {
+	.reveal-button {
 		z-index: 9999;
+		min-width: 2em;
+		font-family: 'source_sans_black';
+		font-size: 1.5em
+		text-align: center;
 		position: relative;
 		background: none;
 		border: black solid 1px;
@@ -51,13 +55,11 @@ h1, h2, .user-actions {
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
 		color: #000;
-		padding: 0 0.5em;
-		font-family: 'source_sans_black';
-		font-size: 1.5em
-
+		padding: 0;
 		&:hover {
 			cursor: pointer;
 			color: #FFF;
+			background-color: #000;
 		}
 	}
 }
