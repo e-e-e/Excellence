@@ -15,10 +15,10 @@ function init () {
 
 function menu_show () {
 	console.log('click');
-	var t = $(this);
+	var t = $(this).find('.reveal-button');
 	if (t.text() === '+')
-		t.children().html('-');
+		t.text('-');
 	else 
-		t.children().html('+');
+		t.text('+');
 	$('#sub_menu').slideToggle();
 }
