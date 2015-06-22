@@ -185,7 +185,8 @@ div.user-actions {
 	.mw-portlet {
 		display: inline-block;
 		font-size: 1em;
-		padding: 0 1em;
+		padding: 1em;
+
 		h3 {
 			display: inline;
 			clear: right;
@@ -195,12 +196,15 @@ div.user-actions {
 			}
 		}
 		ul {
-			display: inline;
+			display: block;
 			list-style-type: none;
 			margin: 0;
 			li {
 				display: inline-block;
-				margin: 0 0.5em;
+				margin-left: 2em;
+				a {
+					white-space: nowrap;
+				}
 			}
 		}
 	}
@@ -218,6 +222,7 @@ div.user-actions {
 		}
 		
 		ul li {
+			margin: 0 0.5em;
 			border-bottom: solid thick transparent;
 			&:hover {
 				border-bottom: #000 thick solid;
