@@ -32,10 +32,14 @@ body {
 
 /* Font definitions */
 
-p, ul li {
+p {
 	font-family: 'alegreya', serif;
 	font-size: @n;
 	padding: 0 @default_margin;
+}
+
+ul li {
+	font-size:  @n;
 }
 
 h1 {
@@ -173,6 +177,10 @@ div.user-actions {
 		padding-top: 2em;
 		margin-bottom: 0;
 	}
+	
+	ul li {
+		font-style: 'alegreya';
+	}
 
 }
 
@@ -276,7 +284,6 @@ div.user-actions {
 }
 
 #mw-navigation {
-	font-family: 'source_sans';
 	width: auto;
 	
 	div, form {
