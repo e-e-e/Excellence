@@ -147,11 +147,15 @@ div.user-actions {
 	float: right;
 	text-align: left;
 	clear: both;
-	border: #000 thin;
+	border: #000 solid thin;
+	border-radius: 3px;
 	background-color: #fff;
 	
 	input[type=search] {
-		border: none;
+		border: 0px none;
+		-webkit-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;
 	}
 
 	input[type=submit] {
@@ -171,6 +175,8 @@ div.user-actions {
 		background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEzIj48ZyBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iIzZjNmM2YyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTExLjI5IDExLjcxbC00LTQiLz48Y2lyY2xlIGN4PSI1IiBjeT0iNSIgcj0iNCIvPjwvZz48L3N2Zz4=");
 		background-position: center center;
 		background-repeat: no-repeat;
+		background-color: transparent;
+		border: none;
 	}
 }
 
@@ -211,25 +217,26 @@ div.user-actions {
 	}
 
 	.mw-portlet {
+
 		display: inline-block;
+		text-align: center;
 		font-size: 1em;
 		padding: 1em;
 
 		h3 {
 			display: inline;
-			float: left;
 			&:after {
 				content: ':'
 			}
 		}
 		ul {
-			display: block;
+			display: inline;
 			text-align: center;
 			list-style-type: none;
 			margin: 0;
 			li {
 				display: inline-block;
-				margin-left: 2em;
+				margin: 0 1em;
 				a {
 					white-space: nowrap;
 				}
