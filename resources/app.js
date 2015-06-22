@@ -9,7 +9,7 @@ $(document).ready(function () {
 function init () {
 	var r = $(reveal_tab).insertAfter('#p-navigation').click(menu_show);
 	var c = $(container).insertAfter(r);
-	$('#mw-navigation').children('div').not('#p-navigation').appendTo(c).hide();
+	$('#mw-navigation').children('div.mw-portlet').not('#p-navigation').appendTo(c).hide();
 }
 
 function menu_show () {
