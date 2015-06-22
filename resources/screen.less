@@ -25,13 +25,7 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	background: @lightblue; /* Old browsers */
-	background: -moz-linear-gradient(45deg, @lightblue 0%, @darkblue 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,@lightblue), color-stop(100%,@darkblue)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg, @lightblue 0%,@darkblue 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg, @lightblue 0%,@darkblue 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg, @lightblue 0%,@darkblue 100%); /* IE10+ */
-  background: linear-gradient(45deg, @lightblue 0%,@darkblue 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{lightblue}', endColorstr='@{darkblue}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
 }
 
 /* Font definitions */
@@ -86,13 +80,14 @@ a {
 	height: 0px;
 
 	.reveal-button {
+		position: relative;
+		top:-1px;
 		z-index: 9999;
 		min-width: 4em;
 		font-family: 'source_sans';
 		font-weight: bold;
 		font-size: @s;
 		text-align: center;
-		position: relative;
 		background: none;
 		border: black solid 1px;
 		border-top: none;
@@ -209,6 +204,7 @@ div.user-actions {
 		font-family: 'source_sans_black';
 		font-style: italic;
 		font-size: 3em;
+		padding: 0;
 		display: inline;
 
 	}
@@ -370,5 +366,22 @@ div.user-actions {
 #p-personal h3 {
 	position: absolute;
 	top: -9999px;
+}
+
+div#bg-color {
+	width: 100%;
+	height: 100%;
+	position: fixed;	
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: @lightblue; /* Old browsers */
+	background: -moz-linear-gradient(45deg, @lightblue 0%, @darkblue 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,@lightblue), color-stop(100%,@darkblue)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, @lightblue 0%,@darkblue 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, @lightblue 0%,@darkblue 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, @lightblue 0%,@darkblue 100%); /* IE10+ */
+  background: linear-gradient(45deg, @lightblue 0%,@darkblue 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{lightblue}', endColorstr='@{darkblue}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 

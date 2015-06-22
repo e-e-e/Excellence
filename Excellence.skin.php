@@ -100,7 +100,7 @@ class ExcellenceTemplate extends BaseTemplate {
 		global $wgUser;
 
 		$this->html( 'headelement' ) ?>
-		
+		<div id="bg-color"></div>
 		<div id="mw-wrapper">
 			<div id="header">
 			<!-- LOGIN AND SEARCH OPTIONS -->
