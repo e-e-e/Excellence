@@ -16,9 +16,9 @@ function init () {
 function menu_show () {
 	console.log('click');
 	var t = $(this).find('.reveal-button');
-	if (t.text() === '+')
-		t.text('-');
+	if (t.text() === 'more')
+		t.text('less');
 	else 
-		t.text('+');
+		t.text('more');
 	$('#sub_menu').slideToggle();
 }
