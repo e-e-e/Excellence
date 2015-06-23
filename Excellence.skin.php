@@ -25,7 +25,6 @@ class SkinExcellence extends SkinTemplate {
 		//should probably make relative with getcwd() to get current file directory
 		$filepath = $this->text('stylepath') +'/' + $this->text('stylename');
 
-		
 		$out->addModuleScripts(array('skins.excellence.js'));
 		$out->addHeadItem('npea-metadata', <<<META
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
@@ -35,7 +34,7 @@ class SkinExcellence extends SkinTemplate {
   <meta property="og:description" content="Up-to-date information about the Australian National Programme for Excellence in the Arts." />
 META
 		);
-		$out->addHeadItem('npea-fonts', '<link rel="stylesheet" type="text/css" href="'+$filepath+'/resources/fonts/sans/stylesheet.css"><link rel="stylesheet" type="text/css" href="'+$filepath+'/resources/fonts/serif/stylesheet.css">');
+		$out->addHeadItem('npea-fonts', '<link />');
 
 	}
 
