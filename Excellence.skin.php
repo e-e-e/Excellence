@@ -34,7 +34,11 @@ class SkinExcellence extends SkinTemplate {
   <meta property="og:description" content="Up-to-date information about the Australian National Programme for Excellence in the Arts." />
 META
 		);
-		$out->addHeadItem('npea-fonts', '<meta content="test"/>');
+		$out->addHeadItem('npea-fonts', <<<FONT
+		<link rel="stylesheet" type="text/css" href="/w/skins/Excellence/resources/fonts/sans/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="/w/skins/Excellence/resources/fonts/serif/stylesheet.css">
+FONT
+		);
 
 	}
 
