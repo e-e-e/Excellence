@@ -63,7 +63,11 @@ div#toc {
 	background-color: @lightblue;
 }
 
-h1, h2, .user-actions {
+h2 {
+	border-bottom: #000 solid thin;
+}
+
+h1, .user-actions {
 	border-bottom: #000 solid thick;
 }
 
@@ -81,9 +85,13 @@ a, a.external, a.new {
 }
 
 .reveal-tab {
-	margin: auto 0 0 0;
+	display: block;
+	float: right;
+	position: relative;
 	height: 0px;
 	.reveal-button {
+		float: right;
+		display: block;
 		position: relative;
 		top:0px;
 		z-index: 9999;
@@ -109,9 +117,19 @@ a, a.external, a.new {
 
 div.user-actions {
 	border:none;
+	.reveal-tab;
 
 	.mw-portlet {
-		display: inline-block;
+		.reveal-button;
+		a {
+			color:#000;
+		}
+		&:hover {
+			a { 
+				color: #fff;
+			}
+		}
+
 		h3 {
 			display: none;
 		}
@@ -125,13 +143,6 @@ div.user-actions {
 				.selected {
 					display: none;
 				}
-			
-			}
-			&:before {
-				content: "[ ";
-			}
-			&:after {
-				content: " ]";
 			}
 		}
 	}
@@ -154,6 +165,7 @@ div.user-actions {
 	max-width: 800px;
 	margin: 0 auto;
 	border: none;
+	position: relative;
 }
 
 #contentSub, #contentSub2 {
@@ -222,11 +234,13 @@ div.user-actions {
 /* search box */
 
 #searchbox {
-	text-align: right;
+	display: block;
+	float: right;
+	clear:both;
+	
 }
 
 #p-search {
-	display: block;
 	text-align: right;
 	width: 200px;
 	max-width: 200px;
@@ -267,10 +281,13 @@ div.user-actions {
 
 #p-personal {
 	display: block;
+	display: block;
+	float: right;
+	clear:both;
+	margin-top: @default_margin;
 	text-align: right;
 	font-family: 'source_sans';
 	font-size: @s;
-
 	ul {
 		list-style-type: none;
 		margin: 0;
