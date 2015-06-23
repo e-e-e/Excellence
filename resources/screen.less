@@ -56,8 +56,9 @@ h2, h3 {
 	margin-top: @m;
 }
 
-div.toc {
+#toc, .toc {
 	width:80%;
+	margin: 0 auto;
 	background-color: transparent;
 	border: none;
 	display: block;
@@ -75,6 +76,9 @@ div.toc {
 			margin: 0 (@default_margin / 2.0);
 		}
 	}
+	li+li:before {
+		content: '*';
+	}	
 }
 
 h2 {
@@ -85,12 +89,14 @@ h1, .user-actions {
 	border-bottom: #000 solid thick;
 }
 
-a, a.external, a.new {
+.basic-link
 
-	color: #015169;
+a, .mw-body a.external, .mw-body a.new {
+
+	color: #002732;
 
 	&:visited {
-		color: #027496;
+		color: #015169;
 	}
 	
 	&:hover {
