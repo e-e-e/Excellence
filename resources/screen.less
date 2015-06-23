@@ -56,6 +56,10 @@ h2, h3 {
 	margin-top: @m;
 }
 
+.mw-content-ltr .toc,
+.mw-content-ltr #toc, 
+.mw-content-rtl .mw-content-ltr .toc,
+.mw-content-rtl .mw-content-ltr #toc,
 #toc, .toc {
 	width:80%;
 	margin: 0 auto;
@@ -74,11 +78,15 @@ h2, h3 {
 			display: inline;
 			white-space: nowrap;
 			margin: 0 (@default_margin / 2.0);
+			font-size: @n;
 		}
 	}
-	li+li:before {
-		content: '*';
-	}	
+}
+
+#toc, .toc ul li ul {
+	&:before, &:after {
+		content: '—';
+	}
 }
 
 h2 {
@@ -102,10 +110,7 @@ h1, .user-actions {
 	}
 }
 
-a {
-	.link;
-}
-
+a,
 .mw-body a.new, .new,
 .mw-body a.external, a.external.autonumber, .external {
 	.link;
@@ -313,9 +318,10 @@ div.user-actions {
 	float: right;
 	clear:both;
 	margin-top: @default_margin;
-	text-align: right;
 	font-family: 'source_sans';
+	font-weight: bold;
 	font-size: @s;
+	text-align: right;
 	ul {
 		list-style-type: none;
 		margin: 0;
