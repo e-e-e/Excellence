@@ -21,9 +21,12 @@ class SkinExcellence extends SkinTemplate {
      */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
-		
-		$out->addModuleScripts(array('skins.excellence.js'));
+		// solves a problem with Resource loader not loading fonts correctly on IE.
+		//should probably make relative with getcwd() to get current file directory
+		$filepath = $this->text('stylepath') +'/' + $this->text('stylename');
 
+		$out->addHeadItem('npea-fonts', '<link rel="stylesheet" type="text/css" href="'+$filepath+'/resources/fonts/sans/stylesheet.css"><link rel="stylesheet" type="text/css" href="'+$filepath+'/resources/fonts/serif/stylesheet.css">');
+		$out->addModuleScripts(array('skins.excellence.js'));
 		$out->addHeadItem('npea-metadata', <<<META
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
 	<meta property="og:type"   content="website" />
