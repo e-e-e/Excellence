@@ -101,9 +101,17 @@ h1, .user-actions {
 		color: #FFF;
 	}
 }
-a:extend(.link) {}
-a.new:extend(.link) {}
-a.external:extend(.link) {}
+
+a {
+	.link;
+}
+
+a.new {
+	.link;
+}
+a.external {
+	.link;
+}
 
 .reveal-tab {
 	display: block;
