@@ -53,14 +53,28 @@ h2, h3 {
 	font-weight: bold;
 	font-style: normal;
 	padding: 0 @default_margin;
+	margin-top: @m;
 }
 
-h3 {
-	font-weight: normal;
-}
-
-div#toc {
-	background-color: @lightblue;
+div.toc {
+	width:80%;
+	background-color: transparent;
+	border: none;
+	display: block;
+	text-align: center;
+	h2 {
+		font-family: 'alegreya', serif;
+		font-size: @m;
+	}
+	ul {
+		text-align:center;
+		display: inline;
+		li {
+			display: inline;
+			white-space: nowrap;
+			margin: 0 (@default_margin / 2.0);
+		}
+	}
 }
 
 h2 {
