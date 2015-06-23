@@ -84,7 +84,7 @@ h2, h3 {
 				&:before {
 					content: '( ';
 				}
-				&:before {
+				&:after {
 					content: ' )';
 				}
 			}
@@ -118,8 +118,13 @@ h1, .user-actions {
 
 a,
 .mw-body a.new, .new,
-.mw-body a.external, a.external.autonumber, .external {
-	.link;
+#p-personal a.new,
+.mw-body a.external,
+a.external.autonumber,
+.external { .link;}
+
+#p-personal a.new:hover {
+	text-decoration: none;
 }
 
 .reveal-tab {
@@ -334,6 +339,9 @@ div.user-actions {
 		li {
 			display: inline-block;
 			margin-left: @default_margin;
+			&:hover, &.active {
+				border: #000 thick solid;
+			}
 		}
 	}
 }
