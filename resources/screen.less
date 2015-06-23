@@ -89,7 +89,7 @@ h1, .user-actions {
 	border-bottom: #000 solid thick;
 }
 
-a {
+.link {
 
 	color: #002732;
 
@@ -101,14 +101,9 @@ a {
 		color: #FFF;
 	}
 }
-
-.new {
-	&:extend(a);
-}
-
-.external {
-	&:extend(a);
-}
+a:extend(.link) {}
+a.new:extend(.link) {}
+a.external:extend(.link) {}
 
 .reveal-tab {
 	display: block;
