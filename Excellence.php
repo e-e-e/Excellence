@@ -35,8 +35,6 @@ $wgMessagesDirs['Excellence'] = __DIR__ . '/i18n';
 
 $wgResourceModules['skins.excellence'] = array(
 	'styles' => array(
-		'Excellence/resources/fonts/sans/stylesheet.css' => array( 'media' => 'screen' ),
-		'Excellence/resources/fonts/serif/stylesheet.css' => array( 'media' => 'screen' ),
 		'Excellence/resources/screen.less' => array( 'media' => 'screen' ),
 	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
