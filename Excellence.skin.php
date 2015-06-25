@@ -32,6 +32,9 @@ class SkinExcellence extends SkinTemplate {
 FONT
 		);
 		$out->addModuleScripts(array('skins.excellence.js'));
+		if ($this->getSkin()->getTitle()->isMainPage()) {
+			$out->addHeadItem('npea-canonical', '<link rel="canonical" href="http://www.npea.org.au" />');
+		}
 		$out->addHeadItem('npea-metadata', <<<META
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
 	<meta property="og:type"   content="website" />
