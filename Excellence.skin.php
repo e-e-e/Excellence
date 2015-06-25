@@ -24,7 +24,7 @@ class SkinExcellence extends SkinTemplate {
 		// solves a problem with Resource loader not loading fonts correctly on IE.
 		//should probably make relative with getcwd() to get current file directory
 		//$filepath = $this->text('stylepath') +'/' + $this->text('stylename');
-		$skindir = '$wgStylePath/{$this->stylename}';
+		$skindir = $wgStylePath.'/'.{$this->stylename};
 		$out->addHeadItem('npea-fonts', <<<FONT
 		<link rel="stylesheet" type="text/css" href="{$skindir}/resources/fonts/sans/stylesheet.css">
 		<link rel="stylesheet" type="text/css" href="{$skindir}/resources/fonts/serif/stylesheet.css">
@@ -34,7 +34,7 @@ FONT
 		$out->addHeadItem('npea-metadata', <<<META
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
 	<meta property="og:type"   content="website" />
-  <meta property="og:url"    content="{$_SERVER['REQUEST_URI']}" />
+  <meta property="og:url"    content="www.npea.org.au/{$_SERVER['REQUEST_URI']}" />
   <meta property="og:image"  content="/logo.png" />
   <meta property="og:description" content="Up-to-date information about the Australian National Programme for Excellence in the Arts." />
 META
