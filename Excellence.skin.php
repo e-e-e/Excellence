@@ -25,6 +25,7 @@ class SkinExcellence extends SkinTemplate {
 		//should probably make relative with getcwd() to get current file directory
 		//$filepath = $this->text('stylepath') +'/' + $this->text('stylename');
 		$skindir = "/w/skins/Excellence";
+		$current_page = $_SERVER['REQUEST_URI'];
 
 		$out->addHeadItem('npea-fonts', <<<FONT
 		<link rel="stylesheet" type="text/css" href="{$skindir}/resources/fonts/sans/stylesheet.css">
@@ -33,12 +34,13 @@ FONT
 		);
 		$out->addModuleScripts(array('skins.excellence.js'));
 		if ($this->getSkin()->getTitle()->isMainPage()) {
+			$current_page = '/';
 			$out->addHeadItem('npea-canonical', '<link rel="canonical" href="http://www.npea.org.au" />');
 		}
 		$out->addHeadItem('npea-metadata', <<<META
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
 	<meta property="og:type"   content="website" />
-  <meta property="og:url"    content="http://www.npea.org.au{$_SERVER['REQUEST_URI']}" />
+  <meta property="og:url"    content="http://www.npea.org.au{$current_page}" />
   <meta property="og:image"  content="http://www.npea.org.au/logo.png" />
   <meta property="og:description" content="Up-to-date information about the Australian National Programme for Excellence in the Arts." />
 META
