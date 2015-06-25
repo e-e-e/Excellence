@@ -34,7 +34,6 @@ FONT
 		);
 		$out->addModuleScripts(array('skins.excellence.js'));
 		if ($this->getSkin()->getTitle()->isMainPage()) {
-			$current_page = '/';
 			$out->addHeadItem('npea-canonical', '<link rel="canonical" href="http://www.npea.org.au" />');
 		}
 		$out->addHeadItem('npea-metadata', <<<META
