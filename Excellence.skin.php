@@ -36,7 +36,7 @@ FONT
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
 	<meta property="og:type"   content="website" />
   <meta property="og:url"    content="http://www.npea.org.au{$_SERVER['REQUEST_URI']}" />
-  <meta property="og:image"  content="/logo.png" />
+  <meta property="og:image"  content="http://www.npea.org.au/logo.png" />
   <meta property="og:description" content="Up-to-date information about the Australian National Programme for Excellence in the Arts." />
 META
 		);
