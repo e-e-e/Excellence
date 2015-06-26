@@ -37,7 +37,7 @@ FONT
 			$out->addHeadItem('npea-canonical', '<link rel="canonical" href="http://www.npea.org.au" />');
 		}
 		$out->addHeadItem('npea-metadata', <<<META
-	<meta name=viewport content="width=500, initial-scale=1">
+	<meta name=viewport content="width=700, initial-scale=1">
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
 	<meta property="og:type"   content="website" />
   <meta property="og:url"    content="http://www.npea.org.au{$current_page}" />
