@@ -117,6 +117,14 @@ class ExcellenceTemplate extends BaseTemplate {
 		<div id="mw-wrapper">
 			<div id="header">
 			<!-- LOGIN AND SEARCH OPTIONS -->
+				
+				<?php 
+					$this->outputPortlet( array(
+						'id' => 'p-personal',
+						'headerMessage' => 'personaltools',
+						'content' => $this->getPersonalTools(),
+					) );
+				?>
 				<div id='searchbox'>
 					<form
 						action="<?php $this->text( 'wgScript' ) ?>"
@@ -133,14 +141,6 @@ class ExcellenceTemplate extends BaseTemplate {
 
 					</form>
 				</div>
-				<?php 
-					$this->outputPortlet( array(
-						'id' => 'p-personal',
-						'headerMessage' => 'personaltools',
-						'content' => $this->getPersonalTools(),
-					) );
-				?>
-				
 				<!-- MAIN TITLE HEADER -->
 				<div id="header-title">
 					<div id="p-logo"><a
