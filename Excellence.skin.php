@@ -37,7 +37,7 @@ FONT
 			$out->addHeadItem('npea-canonical', '<link rel="canonical" href="http://www.npea.org.au" />');
 		}
 		$out->addHeadItem('npea-metadata', <<<META
-	<meta name=viewport content="width=700, initial-scale=1">
+	<meta name=viewport content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
 	<meta property="og:type"   content="website" />
   <meta property="og:url"    content="http://www.npea.org.au{$current_page}" />
@@ -117,13 +117,6 @@ class ExcellenceTemplate extends BaseTemplate {
 		<div id="mw-wrapper">
 			<div id="header">
 			<!-- LOGIN AND SEARCH OPTIONS -->
-				<?php 
-					$this->outputPortlet( array(
-						'id' => 'p-personal',
-						'headerMessage' => 'personaltools',
-						'content' => $this->getPersonalTools(),
-					) );
-				?>
 				<div id='searchbox'>
 					<form
 						action="<?php $this->text( 'wgScript' ) ?>"
@@ -140,6 +133,14 @@ class ExcellenceTemplate extends BaseTemplate {
 
 					</form>
 				</div>
+				<?php 
+					$this->outputPortlet( array(
+						'id' => 'p-personal',
+						'headerMessage' => 'personaltools',
+						'content' => $this->getPersonalTools(),
+					) );
+				?>
+				
 				<!-- MAIN TITLE HEADER -->
 				<div id="header-title">
 					<div id="p-logo"><a
