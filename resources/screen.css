@@ -309,7 +309,7 @@ div.user-actions a:active {
 #p-logo a {
   text-align: center;
 }
-@media screen only and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   #p-logo {
     display: none;
   }
@@ -328,7 +328,7 @@ div.user-actions a:active {
   padding: 0;
   display: inline;
 }
-@media screen only and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   #title {
     text-align: center;
   }
