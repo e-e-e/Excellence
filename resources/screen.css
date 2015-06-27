@@ -10,6 +10,9 @@ body {
   padding: 0;
   background: #87e0fd;
   /* Old browsers */
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 /* Font definitions */
 p {
@@ -337,7 +340,8 @@ div.user-actions a:active {
 #searchbox {
   display: block;
   float: right;
-  clear: left;
+  clear: right;
+  margin-right: 17px;
 }
 #p-search {
   text-align: right;
@@ -377,12 +381,13 @@ div.user-actions a:active {
 }
 #p-personal {
   display: block;
-  float: right;
+  float: left;
   margin-top: 17px;
+  margin-left: 17px;
   font-family: 'source_sans';
   font-weight: bold;
   font-size: 17px;
-  text-align: right;
+  text-align: left;
 }
 #p-personal ul {
   list-style-type: none;
@@ -390,7 +395,7 @@ div.user-actions a:active {
 }
 #p-personal ul li {
   display: inline-block;
-  margin-left: 17px;
+  margin-right: 17px;
   border-bottom: transparent 5px solid;
 }
 #p-personal ul li:hover,
@@ -419,7 +424,7 @@ div.user-actions a:active {
   display: inline-block;
   text-align: center;
   font-size: 17px;
-  padding: 17px 17px 0 17px;
+  padding: 17px 0 0 0;
 }
 #mw-navigation .mw-portlet h3 {
   font-size: 17px;
