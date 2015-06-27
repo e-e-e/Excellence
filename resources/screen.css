@@ -341,7 +341,12 @@ div.user-actions a:active {
   display: block;
   float: right;
   clear: right;
-  margin-right: 17px;
+  margin-right: 0;
+}
+@media only screen and (max-width: 717px) {
+  #searchbox {
+    margin-right: 17px;
+  }
 }
 #p-search {
   text-align: right;
@@ -383,7 +388,7 @@ div.user-actions a:active {
   display: block;
   float: left;
   margin-top: 17px;
-  margin-left: 17px;
+  margin-left: 0;
   font-family: 'source_sans';
   font-weight: bold;
   font-size: 17px;
@@ -401,6 +406,11 @@ div.user-actions a:active {
 #p-personal ul li:hover,
 #p-personal ul li.active {
   border-bottom: #000000 5px solid;
+}
+@media only screen and (max-width: 717px) {
+  #p-personal {
+    margin-left: 17px;
+  }
 }
 #mw-navigation {
   width: auto;

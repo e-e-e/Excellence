@@ -20,6 +20,8 @@
 @default_margin: 17px;
 @border_weight: 5px;
 
+@content_width: 700px;
+
 /* Page layout */
 
 html,
@@ -220,7 +222,7 @@ div.user-actions {
 }
 
 #mw-wrapper {
-	max-width: 700px;
+	max-width: @content_width;
 	margin: 0 auto;
 	border: none;
 	position: relative;
@@ -305,8 +307,12 @@ div.user-actions {
 	display: block;
 	float: right;
 	clear: right;
-	margin-right: @default_margin;
+	margin-right: 0;
 	
+	@media only screen and (max-width: (@content_width + @default_margin ) ) {
+		margin-right: @default_margin;
+	}
+
 }
 
 #p-search {
@@ -352,7 +358,7 @@ div.user-actions {
 	display: block;
 	float: left;
 	margin-top: @default_margin;
-	margin-left: @default_margin;
+	margin-left: 0;
 	font-family: 'source_sans';
 	font-weight: bold;
 	font-size: @n;
@@ -369,6 +375,11 @@ div.user-actions {
 			}
 		}
 	}
+	
+	@media only screen and (max-width: (@content_width + @default_margin ) ) {
+		margin-left: @default_margin;
+	}
+
 }
 
 #mw-navigation {
