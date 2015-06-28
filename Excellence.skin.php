@@ -26,6 +26,34 @@ class SkinExcellence extends SkinTemplate {
 		//$filepath = $this->text('stylepath') +'/' + $this->text('stylename');
 		$skindir = "/w/skins/Excellence";
 		$current_page = $_SERVER['REQUEST_URI'];
+		$hue = rand(0, 360);
+		$light = "hsl({$hue},96%,76%)";
+		$dark = "hsl({$hue},95%,44%)";
+
+		$out->addHeadItem('npea-fonts', <<<FONT
+		<style type="text/css">
+			html, body {
+				background-color: {$light};
+			}
+			div#bg-color {
+				width: 100%;
+				height: 100%;
+				position: fixed;	
+				top: 0;
+				left: 0;
+				z-index:0;
+				background: @lightblue; /* Old browsers */
+				background: -moz-linear-gradient(45deg, {$light} 0%, {$dark} 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,{$light}), color-stop(100%,{$dark})); /* Chrome,Safari4+ */
+			  background: -webkit-linear-gradient(45deg, {$light} 0%,{$dark} 100%); /* Chrome10+,Safari5.1+ */
+			  background: -o-linear-gradient(45deg, {$light} 0%,{$dark} 100%); /* Opera 11.10+ */
+			  background: -ms-linear-gradient(45deg, {$light} 0%,{$dark} 100%); /* IE10+ */
+			  background: linear-gradient(45deg, {$light} 0%,{$dark} 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{$light}', endColorstr='{$dark}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			}
+		</style>
+FONT
+		);
 
 		$out->addHeadItem('npea-fonts', <<<FONT
 		<link rel="stylesheet" type="text/css" href="{$skindir}/resources/fonts/sans/stylesheet.css">
