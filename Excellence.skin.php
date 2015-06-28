@@ -30,7 +30,7 @@ class SkinExcellence extends SkinTemplate {
 		$light = "hsl({$hue},96%,76%)";
 		$dark = "hsl({$hue},95%,44%)";
 
-		$out->addHeadItem('npea-fonts', <<<FONT
+		$out->addHeadItem('npea-background', <<<FONT
 		<style type="text/css">
 			html, body {
 				background-color: {$light};
