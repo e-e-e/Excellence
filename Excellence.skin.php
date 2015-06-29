@@ -36,6 +36,7 @@ class SkinExcellence extends SkinTemplate {
 				background-color: {$light};
 			}
 			div#bg-color {
+				pointer-events: none;
 				width: 100%;
 				height: 100%;
 				position: fixed;	
@@ -170,10 +171,11 @@ class ExcellenceTemplate extends BaseTemplate {
 					</form>
 				</div>
 				<!-- MAIN TITLE HEADER -->
+				<?php $mainpage_href = htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ); ?>
 				<div id="header-title">
 					<div id="p-logo"><a
 						role="banner"
-						href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
+						href="<?php echo $mainpage_href; ?>"
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
 					>
 						<img
@@ -181,7 +183,7 @@ class ExcellenceTemplate extends BaseTemplate {
 							alt="<?php $this->text( 'sitename' ) ?>"
 						/>
 					</a></div>
-					<div id='title'><h1>National Programme For Excellence in the Arts</h1></div>
+					<div id='title'><h1><a href="/Nationalism">National</a> <a href="<?php echo $mainpage_href; ?>">Programme</a> <a href="<?php echo $mainpage_href; ?>">For</a> <a href="/Excellence">Excellence</a> <a href="<?php echo $mainpage_href; ?>">in</a> <a href="<?php echo $mainpage_href; ?>">the</a> <a href="<?php echo $mainpage_href; ?>">Arts</a></h1></div>
 				</div>
 				<!-- HEARDER MAIN NAV MENU -->
 				<div id="mw-navigation">

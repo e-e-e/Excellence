@@ -1,14 +1,16 @@
 <?php
 /*** set the content type header ***/
 	header("Content-type: text/css");
-
+	$darkblue: "#05abe0";
+	$lightblue: "#87e0fd";
 	$hue = rand(0, 360);
 	$light = "hsl({$hue},96%,76%)";
 	$dark = "hsl({$hue},95%,44%)";
 ?>
 
 html, body {
-	background-color: <?php $light ?>;
+	background-color: <?php echo $lightblue ?>;
+	background-color: <?php echo $light ?>;
 }
 div#bg-color {
 	width: 100%;
@@ -24,5 +26,5 @@ div#bg-color {
   background: -o-linear-gradient(45deg, <?php echo $light ?> 0%,<?php echo $dark ?> 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(45deg, <?php echo $light ?> 0%,<?php echo $dark ?> 100%); /* IE10+ */
   background: linear-gradient(45deg, <?php echo $light ?> 0%,<?php echo $dark ?> 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $light ?>', endColorstr='<?php echo $dark ?>',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $lightblue ?>', endColorstr='<?php echo $darkblue ?>',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
