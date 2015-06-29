@@ -331,6 +331,9 @@ div.user-actions a:active {
   padding: 0;
   display: inline;
 }
+#title a:hover {
+  text-decoration: none;
+}
 @media only screen and (max-width: 400px) {
   #title {
     text-align: center;
