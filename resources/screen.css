@@ -230,6 +230,7 @@ div.user-actions a:active {
 .mw-content-rtl .mw-content-ltr #toc ul li ul,
 #toc ul li ul,
 .toc ul li ul {
+  white-space: normal;
   margin: 0;
 }
 .mw-content-ltr .toc ul li ul:before,
