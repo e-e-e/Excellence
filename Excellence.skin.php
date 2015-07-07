@@ -25,6 +25,10 @@ class SkinExcellence extends SkinTemplate {
 		//should probably make relative with getcwd() to get current file directory
 		//$filepath = $this->text('stylepath') +'/' + $this->text('stylename');
 		$skindir = "/w/skins/Excellence";
+		$page_title = "NPEA: " . htmlentities($this->getSkin()->getTitle()->getText());
+		if ($this->getSkin()->getTitle()->isMainPage()) {
+			$page_title = "The National Program for Excellence in the Arts";
+		}
 		$current_page = $_SERVER['REQUEST_URI'];
 		$hue = rand(0, 360);
 		$light = "hsl({$hue},96%,76%)";
@@ -67,11 +71,11 @@ FONT
 		}
 		$out->addHeadItem('npea-metadata', <<<META
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="The National Programme for Excellence in the Arts"/>
+	<meta property="og:title" content="{$page_title}"/>
 	<meta property="og:type"   content="website" />
   <meta property="og:url"    content="http://www.npea.org.au{$current_page}" />
   <meta property="og:image"  content="http://www.npea.org.au/logo.png" />
-  <meta property="og:description" content="Up-to-date information about the Australian National Programme for Excellence in the Arts." />
+  <meta property="og:description" content="A counter-factual wiki where the artistic community are collectively defining 'Excellence' in the Arts." />
 META
 		);
 
@@ -183,7 +187,7 @@ class ExcellenceTemplate extends BaseTemplate {
 							alt="<?php $this->text( 'sitename' ) ?>"
 						/>
 					</a></div>
-					<div id='title'><h1><a href="/Nationalism">National</a> <a href="<?php echo $mainpage_href; ?>">Programme</a> <a href="<?php echo $mainpage_href; ?>">For</a> <a href="/Excellence">Excellence</a> <a href="<?php echo $mainpage_href; ?>">in</a> <a href="<?php echo $mainpage_href; ?>">the</a> <a href="<?php echo $mainpage_href; ?>">Arts</a></h1></div>
+					<div id='title'><h1><a href="/Nationalism">National</a> <a href="<?php echo $mainpage_href; ?>">Program</a> <a href="<?php echo $mainpage_href; ?>">For</a> <a href="/Excellence">Excellence</a> <a href="<?php echo $mainpage_href; ?>">in</a> <a href="<?php echo $mainpage_href; ?>">the</a> <a href="<?php echo $mainpage_href; ?>">Arts</a></h1></div>
 				</div>
 				<!-- HEARDER MAIN NAV MENU -->
 				<div id="mw-navigation">
