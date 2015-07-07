@@ -308,20 +308,6 @@ h1.firstHeading {
   padding-top: 1em;
   margin-bottom: 0;
 }
-h1.firstHeading a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
-}
-h1.firstHeading a:visited {
-  color: #000;
-}
-h1.firstHeading a:active {
-  color: #FFF;
-}
-h1.firstHeading a:hover {
-  color: #FFF;
-}
 .mw-body-content {
   margin-top: 25.5px;
 }
@@ -365,8 +351,19 @@ h1.firstHeading a:hover {
   padding: 0;
   display: inline;
 }
-#title a:hover {
+#title a {
+  font-weight: bold;
   text-decoration: none;
+  color: #000;
+}
+#title a:visited {
+  color: #000;
+}
+#title a:active {
+  color: #FFF;
+}
+#title a:hover {
+  color: #FFF;
 }
 @media only screen and (max-width: 400px) {
   #title {
