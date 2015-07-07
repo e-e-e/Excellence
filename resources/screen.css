@@ -10,9 +10,11 @@ body {
   padding: 0;
   background: #87e0fd;
   /* Old browsers */
-  overflow-x: hidden;
   height: 100%;
   width: 100%;
+}
+body {
+  overflow-x: hidden;
 }
 /* Font definitions */
 p {
