@@ -55,6 +55,20 @@ h1,
 .link:hover {
   color: #FFF;
 }
+.darklink {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+.darklink:visited {
+  color: #000;
+}
+.darklink:active {
+  color: #FFF;
+}
+.darklink:hover {
+  color: #FFF;
+}
 a,
 .mw-body a.new,
 .new,
@@ -173,13 +187,18 @@ div.user-actions .mw-portlet ul li.selected {
 }
 div.user-actions a {
   font-family: 'source_sans';
+  font-weight: bold;
+  text-decoration: none;
   color: #000;
 }
-div.user-actions a:hover {
-  color: #fff;
+div.user-actions a:visited {
+  color: #000;
 }
 div.user-actions a:active {
-  color: #ffffff;
+  color: #FFF;
+}
+div.user-actions a:hover {
+  color: #FFF;
 }
 .mw-content-ltr .toc,
 .mw-content-ltr #toc,
@@ -283,11 +302,25 @@ div.user-actions a:active {
   overflow: hidden;
   overflow-x: hidden;
 }
-.mw-body h1.firstHeading {
+h1.firstHeading {
   font-family: 'source_sans_black';
   font-style: italic;
   padding-top: 1em;
   margin-bottom: 0;
+}
+h1.firstHeading a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+h1.firstHeading a:visited {
+  color: #000;
+}
+h1.firstHeading a:active {
+  color: #FFF;
+}
+h1.firstHeading a:hover {
+  color: #FFF;
 }
 .mw-body-content {
   margin-top: 25.5px;

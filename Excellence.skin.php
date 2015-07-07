@@ -75,7 +75,7 @@ FONT
 	<meta property="og:type"   content="website" />
   <meta property="og:url"    content="http://www.npea.org.au{$current_page}" />
   <meta property="og:image"  content="http://www.npea.org.au/logo.png" />
-  <meta property="og:description" content="A counter-factual wiki where the artistic community are collectively defining 'Excellence' in the Arts." />
+  <meta property="og:description" content="A counter-factual wiki where the artistic community are collectively defining 'Excellence' in the arts." />
 META
 		);
 
